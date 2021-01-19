@@ -70,6 +70,8 @@ def to_camel_case(underscore_str):
             "alreadyCamel"
     """
     camelcase_list = underscore_str.split('_')
+    if len(camelcase_list) == 1:
+        return underscore_str
     camelcase_str = ''
     for c in camelcase_list:
         camelcase_str+=c.capitalize()
